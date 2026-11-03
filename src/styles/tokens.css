@@ -1,0 +1,65 @@
+/* Fonts, root tokens and the rem scale, copied from the source stylesheet (unlayered). */
+@font-face {
+  font-family: FwTRIAL Pangea VAR;
+  src: url(../assets/fonts/FwTRIAL-PangeaVAR.ttf) format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: Pangea Bold;
+  src: url(../assets/fonts/Pangea-Bold.woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --design-width-mobile: 375;
+  --design-width-pc: 1920;
+  --font-family-pangea: "FwTRIAL Pangea VAR", sans-serif;
+  --font-family-pangea-bold: "Pangea Bold", "FwTRIAL Pangea VAR", sans-serif;
+  --font-family-pangea-semi-cond: "Pangea Basic Text SemiCond", "FwTRIAL Pangea VAR", sans-serif;
+  --color-bg: #fff;
+
+  /* Element Plus tokens used by the nav dropdown */
+  --el-bg-color-overlay: #fff;
+  --el-border-color-light: #e4e7ed;
+  --el-text-color-primary: #303133;
+  --el-text-color-regular: #606266;
+  --el-font-size-base: 14px;
+  --el-border-radius-base: 4px;
+  --el-box-shadow-light: 0px 0px 12px #0000001f;
+  --el-transition-duration: 0.3s;
+  --el-transition-function-fast-bezier: cubic-bezier(0.23, 1, 0.32, 1);
+  --el-transition-md-fade:
+    transform var(--el-transition-duration) var(--el-transition-function-fast-bezier),
+    opacity var(--el-transition-duration) var(--el-transition-function-fast-bezier);
+
+  --animate-duration: 1s;
+  --animate-delay: 1s;
+  --animate-repeat: 1;
+}
+
+body {
+  font-family: var(--font-family-pangea);
+  font-size: 16px;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+html {
+  background-color: var(--color-bg);
+  font-size: max(50px, (100vw / var(--design-width-mobile)) * 100);
+}
+
+@media (min-width: 64rem) {
+  html {
+    font-size: max(52px, (100vw / var(--design-width-pc)) * 100);
+  }
+}
+
+.scroll-reveal--before {
+  opacity: 0;
+}

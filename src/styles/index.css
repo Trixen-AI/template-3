@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@import "animate.css";
+@import "./tokens.css";
+@import "./components.css";
+
+@theme {
+  --font-sans: "FwTRIAL Pangea VAR", ui-sans-serif, system-ui, sans-serif;
+  --font-pangea-bold: "Pangea Bold", "FwTRIAL Pangea VAR", ui-sans-serif, system-ui, sans-serif;
+}
